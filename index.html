@@ -265,10 +265,10 @@
 			<!-- Section 4 -->
 			<section class="section-4" id="section-4">
 				<h1 class="section-heading section-4-heading">Let's Talk</h1>
-				<form action="" class="contact-form center">
-					<input type="text" placeholder="Name" />
-					<input type="email" placeholder="Email" />
-					<textarea placeholder="Message"></textarea>
+				<form action="POST" data-netlify="true" class="contact-form center">
+					<input type="text" name="name" placeholder="Name" />
+					<input type="email" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
 					<input type="submit" value="Submit" class="contact-form-btn" />
 				</form>
 			</section>
