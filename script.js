@@ -10,7 +10,8 @@ window.addEventListener("scroll", () => {
 	mainFb();
 });
 
-const mainFb = () => {
+const mainFb = (e) => {
+	e.preventDefault();
 	if (window.pageYOffset >= navbarOffsetTop) {
 		navbar.classList.add("sticky");
 	} else {
