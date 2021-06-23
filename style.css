@@ -39,7 +39,7 @@ html {
 .section-2,
 .section-3,
 .section-4 {
-	overscroll-behavior: contain;
+	overscroll-behavior: none;
 }
 /* End of Reset and Common Styles */
 
