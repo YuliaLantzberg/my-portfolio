@@ -34,6 +34,13 @@ html {
 	border-bottom: 0.3rem solid #333;
 	text-shadow: 0.2rem 0.2rem 0.5rem #555;
 }
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+	overscroll-behavior: contain;
+}
 /* End of Reset and Common Styles */
 
 /* Section 1 */
