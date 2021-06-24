@@ -2,6 +2,7 @@ const navbar = document.querySelector(".navbar");
 const sections = document.querySelectorAll("section");
 const navbarLinks = document.querySelectorAll(".navbar-link");
 const progress = document.querySelector(".progress-bars-wrapper");
+const scrollUpBtn = document.querySelector(".scroll-up-btn");
 
 const navbarOffsetTop = navbar.offsetTop;
 const progressBarPercent = [97, 89, 85, 87, 80, 70, 50];
@@ -13,8 +14,10 @@ window.addEventListener("scroll", () => {
 const mainFb = (e) => {
 	if (window.pageYOffset >= navbarOffsetTop) {
 		navbar.classList.add("sticky");
+		scrollUpBtn.style.visibility = "visible";
 	} else {
 		navbar.classList.remove("sticky");
+		scrollUpBtn.style.visibility = "hidden";
 	}
 
 	sections.forEach((section, i) => {

@@ -337,7 +337,7 @@ html {
 /* End of Section 3 */
 
 /* Section 4 */
-.section-4 {
+/* .section-4 {
 	width: 100%;
 	height: 70vh;
 	background-color: #333;
@@ -382,6 +382,96 @@ html {
 	text-transform: uppercase;
 	letter-spacing: 1rem;
 	cursor: pointer;
+} */
+
+.section-4 {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-color: #333;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.section-4-heading {
+	color: #ccc;
+	box-shadow: none;
+	border-color: currentColor;
+	margin-bottom: 3rem;
+}
+
+.form-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	perspective: 150rem;
+}
+
+.form-img {
+	width: 55rem;
+	background-color: rgba(129, 16, 45, 0.5);
+	padding: 5rem;
+	opacity: 0.8;
+	box-shadow: -2rem 1rem 3rem #444;
+	border-radius: 0.5rem;
+	transform: rotateY(20deg);
+	transition: all 0.5s;
+}
+
+.form-img:hover {
+	transform: translateY(-2rem) rotateY(20deg);
+	box-shadow: -5rem 5rem 7rem #555;
+}
+
+.contact-form {
+	width: 50rem;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	border-radius: 0.5rem;
+	box-shadow: 3rem 3rem 4rem #444;
+	transform: rotateY(-20deg);
+	transition: all 0.5s;
+}
+
+.contact-form:hover {
+	transform: translateY(-2rem) rotateY(-20deg);
+	box-shadow: 5rem 5rem 7rem #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+	margin: 1rem;
+	padding: 1rem;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	border: 0.2rem solid var(--primary-color);
+	border-radius: 2rem;
+	box-shadow: inset 0.1rem 0.1rem 0.2rem #ddd, inset -0.1rem -0.1rem 0.2rem #ddd;
+}
+
+.contact-form textarea {
+	max-height: 15rem;
+	min-height: 10rem;
+	max-width: 100%;
+	min-width: 70%;
+}
+
+.contact-form .contact-form-btn {
+	background-color: var(--primary-color);
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.contact-form .contact-form-btn:hover {
+	background-color: #b90f56;
 }
 /* End of Section 4 */
 
@@ -419,6 +509,26 @@ html {
 }
 /* End Of Section 5 */
 
+.scroll-up-btn {
+	width: 5rem;
+	height: 5rem;
+	background-color: var(--primary-color);
+	position: fixed;
+	bottom: 5rem;
+	right: 5rem;
+	border-radius: 50%;
+	font-size: 1.6rem;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.5s;
+}
+
+.scroll-up-btn:hover {
+	background-color: #b90f56;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
 	.services {
@@ -429,9 +539,37 @@ html {
 	.service {
 		margin: 3rem 2rem;
 	}
+}
 
+@media (max-width: 1100px) {
 	.section-4 {
-		height: 80vh;
+		height: 70vh;
+	}
+
+	.form-img {
+		display: none;
+	}
+	.contact-form {
+		transform: translateY(0);
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		margin: 0.5rem 0;
+		background-color: #eef;
+		font-size: 1.5rem;
+		border: 0.2rem solid var(--primary-color);
+		border-radius: 0;
+		color: #555;
+		padding: 0.5rem;
+		box-shadow: none;
+	}
+
+	.contact-form textarea {
+		height: 10rem;
 	}
 }
 
